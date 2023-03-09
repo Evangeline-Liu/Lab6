@@ -1,7 +1,7 @@
-copassword = ""
+en_password = ""
 #menu
 print("Menu")
-print("------------- ")
+print("-------------")
 print("1. Encode ")
 print("2. Decode")
 print("3. Quit ")
@@ -23,7 +23,7 @@ while True:
                     holdlist[i] = 0
         #turn back to string
         for num in holdlist:
-            copassword += str(num)
+            en_password += str(num)
         print("Your password has been encoded and stored! ")
         print()
     elif choice == 2:
