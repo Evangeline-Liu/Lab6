@@ -15,6 +15,7 @@ while True:
     if choice == 1:
         #encode
         password = input("Please enter your password to encode: ")
+        #reset nums
         holdlist = []
         en_password = ""
         holdlist[:0] = password
@@ -29,6 +30,8 @@ while True:
         print("Your password has been encoded and stored! ")
         print()
     elif choice == 2:
-        pass
+        #decode
+        print(f"The encoded password is {en_password}, and the original password is {password}. ")
     elif choice == 3:
+        #exit
         exit()
