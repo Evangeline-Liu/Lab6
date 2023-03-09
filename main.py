@@ -9,15 +9,17 @@ print("")
 
 
 #options
-choice = int(input("Please enter an option: "))
+
 while True:
+    choice = int(input("Please enter an option: "))
     if choice == 1:
         #encode
         password = input("Please enter your password to encode: ")
         holdlist = []
+        en_password = ""
         holdlist[:0] = password
         for i in range(len(password)):
-            for j in range(5):
+            for j in range(3):
                 holdlist[i] = int(holdlist[i]) + 1
                 if int(holdlist[i]) == 10:
                     holdlist[i] = 0
