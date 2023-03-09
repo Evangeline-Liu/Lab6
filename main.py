@@ -7,6 +7,9 @@ print("2. Decode")
 print("3. Quit ")
 print("")
 
+#for decode function
+def decode():
+    pass
 
 #options
 
