@@ -21,7 +21,11 @@ if choice == 1:
             holdlist[i] = int(holdlist[i]) + 1
             if int(holdlist[i]) == 10:
                 holdlist[i] = 0
+    #turn back to string
     for num in holdlist:
         copassword += str(num)
+    print("Your password has been encoded and stored! ")
 elif choice == 2:
     pass
+elif choice == 3:
+    exit()
