@@ -1,4 +1,4 @@
-#
+
 en_password = ""
 #menu
 print("Menu")
@@ -33,9 +33,11 @@ while True:
             en_password += str(num)
         print("Your password has been encoded and stored! ")
         print()
+
     elif choice == 2:
         #decode
         print(f"The encoded password is {en_password}, and the original password is {password}. ")
+        print()
     elif choice == 3:
         #exit
         exit()
