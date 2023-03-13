@@ -1,26 +1,15 @@
-
-en_password = ""
-#menu
-print("Menu")
-print("-------------")
-print("1. Encode ")
-print("2. Decode")
-print("3. Quit ")
-print("")
+# Encode: Evangeline
+# Decode: Renan
 
 #for decode function
 def decode():
-    pass
-
-#options
-
-while True:
     choice = int(input("Please enter an option: "))
     if choice == 1:
         #encode
         password = input("Please enter your password to encode: ")
         #reset nums
         holdlist = []
+        global en_password
         en_password = ""
         holdlist[:0] = password
         for i in range(len(password)):
@@ -36,8 +25,34 @@ while True:
 
     elif choice == 2:
         #decode
-        print(f"The encoded password is {en_password}, and the original password is {password}. ")
+        dec_password = ""
+        #password = "123456789"
+        for num in en_password:
+            num_dec = int(num) - 3
+            if num_dec < 0:
+                num_dec += 10
+            dec_password = dec_password + str(num_dec)
+        #print(num_dec)
+        print(f"The encoded password is {en_password}, and the original password is {dec_password}. ")
         print()
     elif choice == 3:
         #exit
         exit()
+        #
+
+
+def main():
+
+    continue_menu = True
+    while continue_menu == True:
+        # menu
+        print("Menu")
+        print("-------------")
+        print("1. Encode ")
+        print("2. Decode")
+        print("3. Quit ")
+        print("")
+        decode()
+
+if __name__ == "__main__":
+    main()
